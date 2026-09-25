@@ -1,8 +1,12 @@
 console.log("estudio en el ces vega media");
 document.addEventListener('DOMContentLoaded', init);
 function init(){
-    const aleatorio=getRandomNumber(1,151)
-    fetchData(aleatorio)
+
+    for(let i=0;i<=150;i++){
+        fetchData(i);
+    }
+    //const aleatorio=getRandomNumber(1,151)
+    //fetchData(aleatorio)
 }
 //retorna un numero aleatorio
 function getRandomNumber(min, max) {
@@ -33,5 +37,8 @@ function pintarCard(pokemon){
     fragment.appendChild(clone)
     flex.appendChild(fragment)
 }
-
+function fondo(){
+    let num=pokemon.stats[0].base_stat
+    console.log(num)
+}
 
